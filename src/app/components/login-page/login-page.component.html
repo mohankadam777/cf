@@ -1,0 +1,9 @@
+<p>login-page works!</p>
+<form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
+  <label>email</label>
+  <input type="text" name="email" id="email" ngModel>
+  <br>
+  <label>password</label>
+  <input type="password" name="password" id="password" ngModel>
+  <button>Login</button>    
+  </form>

@@ -13,12 +13,25 @@ export class AppComponent implements OnInit,OnDestroy{
   isAuthenticated:boolean=false;
   ngOnInit(): void {
     this.userSub=this.userSevice.user.subscribe((user)=>{
-      this.isAuthenticated=!!user;
+      if(user.token){
+        this.isAuthenticated=!!user;
+        console.log("in if statement");
+        
+      }else{
+        console.log("in else statement",user);
+
+
+        this.isAuthenticated=false
+      }
+      // this.isAuthenticated=(user.token)?true:false
     })
   }
   
   ngOnDestroy(): void {
     this.userSub.unsubscribe();
+  }
+  logout(){
+    this.userSevice.logout();
   }
   title = 'cafe';
 }

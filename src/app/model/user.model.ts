@@ -4,11 +4,10 @@ export class User{
        public email?:string,
        private _expirationTime?:Date
        ){}
+    //    User(){}
     
        get token(){
-//         if(!this._expirationTime || this._expirationTime<new Date()){
-// return null;
-//         }
+        
         return this._token;
        }
 }

@@ -16,7 +16,6 @@ constructor(private userService : UserService,private router:Router){}
 this.userService.login(value).subscribe({
   next:(res:any)=>{
     let token:string=res;
-    localStorage.setItem("token",token.substring(10,token.length-2))
     console.log("in login method");
     this.router.navigate(['/secure'])
   },

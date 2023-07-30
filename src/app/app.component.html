@@ -1,7 +1,8 @@
-<a href="/login" style="margin: 10px;">Login us</a>
-<a href="/home" style="margin: 10px;">Home</a>
-<a href="/secure" style="margin: 10px;">Secure</a>
-<a href="/unsecure" style="margin: 10px;">Unsecure</a>
+<a routerLink="/login" style="margin: 10px;">Login us</a>
+<a routerLink="/home" style="margin: 10px;">Home</a>
+<a routerLink="/secure" style="margin: 10px;">Secure</a>
+<a routerLink="/unsecure" style="margin: 10px;">Unsecure</a>
+<button (click)="logout()">Logout</button>
 
 <!-- navbar shuld be here -->
 <p  [style.background-color]="isAuthenticated?'green':'red'">Current Authentication state : {{isAuthenticated}}</p>
